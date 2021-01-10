@@ -47,7 +47,14 @@ class App extends Component {
 
           <Dropdown.Menu className="d-flex flex-column align-items-center">
             {streams.map((stream) => (
-              <Button className="btn">{stream.name}</Button>
+              <Button
+                className="btn"
+                onClick={() => {
+                  this.setState({ currentStream: stream });
+                }}
+              >
+                {stream.name}
+              </Button>
             ))}
           </Dropdown.Menu>
         </Dropdown>
