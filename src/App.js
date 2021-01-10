@@ -9,7 +9,7 @@ const streams = [
   {
     name: "Big Buck Bunny",
     src:
-      "https://multiplatform-f.akamaihd.net/i/multi/april11/sintel/sintel-hd_,512x288_450_b,640x360_700_b,768x432_1000_b,1024x576_1400_m,.mp4.csmil/master.m3u8",
+      "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
   },
   {
     name: "HD World",
@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className="d-flex flex-column align-items-center container">
-        <Videojs {...videoJsOptions} />
+        <Videojs {...videoJsOptions} sources={this.state.currentStream.src} />
         <Dropdown className="btn">
           <Dropdown.Toggle variant="success" id="dropdown-basic">
             Video Streams
