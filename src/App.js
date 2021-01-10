@@ -6,17 +6,18 @@ import Button from "react-bootstrap/Button";
 
 function App() {
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex flex-column align-items-center">
       <Videojs {...videoJsOptions} />
       <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Dropdown Button
+          Video Streams
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
           <Button>Video 1</Button>
           <Button>Video 2</Button>
           <Button>Video 3</Button>
+          <Button>Video 4</Button>
         </Dropdown.Menu>
       </Dropdown>
     </div>
