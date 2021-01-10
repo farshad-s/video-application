@@ -31,6 +31,10 @@ const streams = [
 class App extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      currentStream: streams[0],
+    };
   }
   render() {
     return (
@@ -42,10 +46,9 @@ class App extends Component {
           </Dropdown.Toggle>
 
           <Dropdown.Menu className="d-flex flex-column align-items-center">
-            <Button className="btn">Video 1</Button>
-            <Button className="btn">Video 2</Button>
-            <Button className="btn">Video 3</Button>
-            <Button className="btn">Video 4</Button>
+            {streams.map((stream) => (
+              <Button className="btn">{stream.name}</Button>
+            ))}
           </Dropdown.Menu>
         </Dropdown>
       </div>
