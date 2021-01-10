@@ -3,7 +3,7 @@ import Videojs from "./video.js";
 import videoJsOptions from "./options";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
-import "./App.css";
+import "../App.css";
 
 const streams = [
   {
