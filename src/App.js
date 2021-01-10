@@ -13,7 +13,7 @@ function App() {
           Video Streams
         </Dropdown.Toggle>
 
-        <Dropdown.Menu>
+        <Dropdown.Menu className="d-flex flex-column align-items-center">
           <Button>Video 1</Button>
           <Button>Video 2</Button>
           <Button>Video 3</Button>
