@@ -1,5 +1,8 @@
+import React from "react";
+import Videojs from "./video.js";
+
 function App() {
-  return <div className="App"></div>;
+  return <Videojs />;
 }
 
 export default App;
