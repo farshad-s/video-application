@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import "../App.css";
 import { Player } from "video-react";
 
-const streams = [
+const streams: { name: string; src: string }[] = [
   {
     name: "Big Buck Bunny",
     src:
@@ -27,7 +27,7 @@ const streams = [
   },
 ];
 
-function App() {
+const App: React.FC = () => {
   const [initialStreamSrc, newStreamSrc] = useState(streams[0].src);
   const [initialStreamName, newStreamName] = useState(streams[0].name);
 
@@ -63,6 +63,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
