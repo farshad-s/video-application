@@ -28,8 +28,8 @@ const streams: { name: string; src: string }[] = [
 ];
 
 const App: React.FC = () => {
-  const [initialStreamSrc, newStreamSrc] = useState(streams[0].src);
-  const [initialStreamName, newStreamName] = useState(streams[0].name);
+  const [initialStreamSrc, newStreamSrc] = useState<string>(streams[0].src);
+  const [initialStreamName, newStreamName] = useState<string>(streams[0].name);
 
   return (
     <div>
