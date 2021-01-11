@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Videojs from "./video.js";
 import videoJsOptions from "./options";
 import Dropdown from "react-bootstrap/Dropdown";
