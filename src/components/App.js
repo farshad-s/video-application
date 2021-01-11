@@ -35,7 +35,9 @@ function App() {
   return (
     <div>
       <Navbar expand="lg" bg="dark" className="justify-content-center">
-        <Navbar.Brand>Video Stream Application</Navbar.Brand>
+        <Navbar.Brand className="text-primary">
+          Video Stream Application
+        </Navbar.Brand>
       </Navbar>
       <div className="d-flex flex-column align-items-center container">
         <Player src={initialStream} />
