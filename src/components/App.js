@@ -30,7 +30,8 @@ const streams = [
 ];
 
 function App() {
-  const [initialStream, newStream] = useState(streams[0].src);
+  const [initialStreamSrc, newStreamSrc] = useState(streams[0].src);
+  const [initialStreamName, newStreamName] = useState(streams[0].name);
 
   return (
     <div>
@@ -40,7 +41,7 @@ function App() {
         </Navbar.Brand>
       </Navbar>
       <div className="d-flex flex-column align-items-center container">
-        <Player src={initialStream} />
+        <Player src={initialStreamSrc} />
         <Dropdown className="btn">
           <Dropdown.Toggle variant="success" id="dropdown-basic">
             Video Streams
@@ -51,7 +52,8 @@ function App() {
               <Button
                 className="btn"
                 onClick={() => {
-                  newStream(streams[index].src);
+                  newStreamSrc(streams[index].src);
+                  newStreamName(streams[index].name);
                 }}
               >
                 {"#" + (index + 1) + " " + stream.name}
@@ -59,6 +61,7 @@ function App() {
             ))}
           </Dropdown.Menu>
         </Dropdown>
+        <p>You are currently watching: {initialStreamName}</p>
       </div>
     </div>
   );
