@@ -54,7 +54,7 @@ function App() {
                   newStream(streams[index].src);
                 }}
               >
-                {stream.name}
+                {"#" + (index + 1) + " " + stream.name}
               </Button>
             ))}
           </Dropdown.Menu>
