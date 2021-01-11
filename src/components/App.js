@@ -29,9 +29,11 @@ const streams = [
 ];
 
 function App() {
+  const [initialStream, newStream] = useState(streams[0].src);
+
   return (
     <div className="d-flex flex-column align-items-center container">
-      <Player src={this.state.currentStream.src} />
+      <Player src={initialStream} />
       <Dropdown className="btn">
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           Video Streams
