@@ -28,39 +28,30 @@ const streams = [
   },
 ];
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+function App() {
+  return (
+    <div className="d-flex flex-column align-items-center container">
+      <Player src={this.state.currentStream.src} />
+      <Dropdown className="btn">
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Video Streams
+        </Dropdown.Toggle>
 
-    this.state = {
-      currentStream: streams[0],
-    };
-  }
-  render() {
-    return (
-      <div className="d-flex flex-column align-items-center container">
-        <Player src={this.state.currentStream.src} />
-        <Dropdown className="btn">
-          <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Video Streams
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu className="d-flex flex-column align-items-center">
-            {streams.map((stream) => (
-              <Button
-                className="btn"
-                onClick={() => {
-                  this.setState({ currentStream: stream });
-                }}
-              >
-                {stream.name}
-              </Button>
-            ))}
-          </Dropdown.Menu>
-        </Dropdown>
-      </div>
-    );
-  }
+        <Dropdown.Menu className="d-flex flex-column align-items-center">
+          {streams.map((stream) => (
+            <Button
+              className="btn"
+              onClick={() => {
+                this.setState({ currentStream: stream });
+              }}
+            >
+              {stream.name}
+            </Button>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
+  );
 }
 
 export default App;
