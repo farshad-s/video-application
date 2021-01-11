@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Videojs from "./video.js";
-import videoJsOptions from "./options";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
