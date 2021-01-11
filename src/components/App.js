@@ -40,11 +40,11 @@ function App() {
         </Dropdown.Toggle>
 
         <Dropdown.Menu className="d-flex flex-column align-items-center">
-          {streams.map((stream) => (
+          {streams.map((stream, index) => (
             <Button
               className="btn"
               onClick={() => {
-                this.setState({ currentStream: stream });
+                newStream(streams[index].src);
               }}
             >
               {stream.name}
