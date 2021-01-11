@@ -3,6 +3,7 @@ import Videojs from "./video.js";
 import videoJsOptions from "./options";
 import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
+import Navbar from "react-bootstrap/Navbar";
 import "../App.css";
 import { Player } from "video-react";
 
@@ -32,26 +33,31 @@ function App() {
   const [initialStream, newStream] = useState(streams[0].src);
 
   return (
-    <div className="d-flex flex-column align-items-center container">
-      <Player src={initialStream} />
-      <Dropdown className="btn">
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Video Streams
-        </Dropdown.Toggle>
+    <div>
+      <Navbar expand="lg" bg="dark" className="justify-content-center">
+        <Navbar.Brand>Video Stream Application</Navbar.Brand>
+      </Navbar>
+      <div className="d-flex flex-column align-items-center container">
+        <Player src={initialStream} />
+        <Dropdown className="btn">
+          <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Video Streams
+          </Dropdown.Toggle>
 
-        <Dropdown.Menu className="d-flex flex-column align-items-center">
-          {streams.map((stream, index) => (
-            <Button
-              className="btn"
-              onClick={() => {
-                newStream(streams[index].src);
-              }}
-            >
-              {stream.name}
-            </Button>
-          ))}
-        </Dropdown.Menu>
-      </Dropdown>
+          <Dropdown.Menu className="d-flex flex-column align-items-center">
+            {streams.map((stream, index) => (
+              <Button
+                className="btn"
+                onClick={() => {
+                  newStream(streams[index].src);
+                }}
+              >
+                {stream.name}
+              </Button>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
     </div>
   );
 }
